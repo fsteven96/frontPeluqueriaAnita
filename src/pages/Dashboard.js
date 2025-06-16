@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import ClienteList from '../components/ClienteList';
 import CitaList from '../components/CitaList';
-import AtencionesPorCliente from '../components/AtencionesPorCliente';
-import FormNuevoCliente from '../components/FormNuevoCliente';
-import FormNuevaCita from '../components/FormNuevaCita';
-import FormNuevaAtencion from '../components/FormNuevaAtencion';
+
+
+
 import ListaAtenciones from '../components/ListaAtenciones';
 
 const Dashboard = () => {
