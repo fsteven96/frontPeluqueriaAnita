@@ -8,7 +8,7 @@ const CitaList = () => {
   const [citasFiltradas, setCitasFiltradas] = useState([]);
   const [clienteNombre, setClienteNombre] = useState('');
   const [mostrarModal, setMostrarModal] = useState(false);
-
+  console.log(clientes);
   // Cargar clientes al inicio
   useEffect(() => {
     const cargarClientes = async () => {
