@@ -11,6 +11,7 @@ const FormNuevoCliente = ({ mostrar, onClose, onClienteAgregado }) => {
     const nuevoCliente = { nombre, telefono };
     try {
       const creado = await crearCliente(nuevoCliente);
+      console.log(creado);
       onClienteAgregado(); // avisamos al padre
       onClose(); // cerramos modal
       setNombre('');
