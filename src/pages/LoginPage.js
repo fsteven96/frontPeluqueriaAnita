@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 
 function LoginPage() {
     const navigate = useNavigate();
-
+    console.log(navigate);
   const [formData, setFormData] = useState({ usuario: '', password: '' });
   const [error, setError] = useState('');
 
