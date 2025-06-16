@@ -1,5 +1,5 @@
 import axios from 'axios';
-const API = 'http://localhost:5232/api';
+const API = 'https://peluqueriaanita-aqegegejepffavg3.canadacentral-01.azurewebsites.net/api';
 
 export const obtenerClientes = async () => (await axios.get(`${API}/Cliente/todosClientes`)).data;
 export const crearCliente = async (cliente) => await axios.post(`${API}/Cliente/agregarCliente`, cliente);
