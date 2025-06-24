@@ -9,6 +9,7 @@ function LoginPage() {
     console.log(navigate);
   const [formData, setFormData] = useState({ usuario: '', password: '' });
   const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     setFormData({ 
@@ -20,7 +21,7 @@ function LoginPage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
-
+    setLoading(true);
     try {
     const data = await login(formData.usuario, formData.password);
 
@@ -34,7 +35,7 @@ function LoginPage() {
     } catch (err) {
     setError('Usuario o contraseña inválidos');
     }
-
+    setLoading(false);
   };
 
   return (
@@ -67,7 +68,7 @@ function LoginPage() {
               required
             />
           </div>
-          <button type="submit" className="btn btn-primary w-100">Ingresar</button>
+          <button type="submit" className="btn btn-primary w-100" disabled={loading}>{loading ? 'Cargando...' : 'Ingresar'}</button>
         </form>
       </div>
     </div>
