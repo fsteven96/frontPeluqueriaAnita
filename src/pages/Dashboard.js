@@ -1,22 +1,14 @@
 import React, { useState } from 'react';
 import ClienteList from '../components/ClienteList';
 import CitaList from '../components/CitaList';
-import { useNavigate } from 'react-router-dom';
+
 
 
 import ListaAtenciones from '../components/ListaAtenciones';
 
 const Dashboard = () => {
   const [seccion, setSeccion] = useState('clientes');
-  const navigate = useNavigate();
-    useEffect(() => {
-    const usuario = localStorage.getItem('usuario');
-
-    if (!usuario) {
-      // No está logueado, redirigir al login
-      navigate('/');
-    }
-  }, []);
+  
   const handleChange = (e) => {
     setSeccion(e.target.value);
   };
