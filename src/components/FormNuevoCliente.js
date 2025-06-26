@@ -9,7 +9,7 @@ const FormNuevoCliente = ({ mostrar, onClose, onClienteAgregado }) => {
     e.preventDefault();
     const nuevoCliente = {
       Nombre: nombre,
-      Telefono: telefono.toString()
+      Telefono: telefono
     };
     try {
       const creado = await crearCliente(nuevoCliente);
