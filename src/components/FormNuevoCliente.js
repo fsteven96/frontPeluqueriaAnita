@@ -2,12 +2,15 @@ import React, { useState } from 'react';
 import { crearCliente } from '../services/api'; // Asegúrate de tener esta función
 
 const FormNuevoCliente = ({ mostrar, onClose, onClienteAgregado }) => {
-  const [Nombre, setNombre] = useState('');
+  const [nombre, setNombre] = useState('');
   const [telefono, setTelefono] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    Const nuevoCliente = { nombre, telefono };
+    const nuevoCliente = {
+          Nombre: nombre,
+          Telefono: telefono.toString()
+        };
     try {
       const creado = await crearCliente(nuevoCliente);
       console.log(creado);
