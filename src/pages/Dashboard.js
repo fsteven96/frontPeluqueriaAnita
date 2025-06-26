@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ClienteList from '../components/ClienteList';
 import CitaList from '../components/CitaList';
 import { useNavigate } from 'react-router-dom'; 
