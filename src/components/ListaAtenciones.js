@@ -53,11 +53,11 @@ const ListaAtenciones = () => {
           <tbody>
             {atenciones.length > 0 ? (
               atenciones.map((atencion) => (
-                <tr key={atencion.id}>
-                  <td>{atencion.nombreCliente}</td>
-                  <td>{new Date(atencion.fechaHora).toLocaleString()}</td>
-                  <td>{atencion.descripcion}</td>
-                  <td>{new Date(atencion.fechaAtencion).toLocaleString()}</td>
+                <tr key={atencion.Id}>
+                  <td>{atencion.NombreCliente}</td>
+                  <td>{new Date(atencion.FechaHora).toLocaleString()}</td>
+                  <td>{atencion.Descripcion}</td>
+                  <td>{new Date(atencion.FechaAtencion).toLocaleString()}</td>
                 </tr>
               ))
             ) : (
