@@ -11,5 +11,5 @@ export const agendarCita = async (cita) => {
 };
 
 export const obtenerAtenciones = async (clienteId) => (await axios.get(`${API}/atenciones`)).data;
-export const registrarAtencion = async (atencion) => await axios.post(`${API}/atenciones`, atencion);
+export const registrarAtencion = async (atencion) => await axios.post(`https://peluqueriaanita-aqegegejepffavg3.canadacentral-01.azurewebsites.net/api/atencion`, atencion);
 
