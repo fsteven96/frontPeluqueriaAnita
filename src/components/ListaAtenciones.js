@@ -54,7 +54,7 @@ const ListaAtenciones = () => {
             {atenciones.length > 0 ? (
               atenciones.map((atencion) => (
                 <tr key={atencion.Id}>
-                  <td>{atencion.NombreCliente}</td>
+                  <td>{atencion.Nombre}</td>
                   <td>{new Date(atencion.FechaHora).toLocaleString()}</td>
                   <td>{atencion.Descripcion}</td>
                   <td>{new Date(atencion.FechaAtencion).toLocaleString()}</td>
