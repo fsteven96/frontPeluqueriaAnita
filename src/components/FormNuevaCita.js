@@ -32,9 +32,9 @@ const FormNuevaCita = ({ mostrar, onClose, onCitaCreada }) => {
 
     try {
       await agendarCita({
-        ClienteId: parseInt(clienteId),
-        FechaHora: fechaHora,
-        Estado: 'Agendada',  // Estado fijo
+        clienteId: parseInt(clienteId),
+        fechaHora: fechaHora,
+        estado: 'Agendada',  // Estado fijo
       });
 
       onCitaCreada();  // Notifica al padre que debe recargar
