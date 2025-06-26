@@ -32,9 +32,9 @@ const FormNuevaCita = ({ mostrar, onClose, onCitaCreada }) => {
 
     try {
       await agendarCita({
-        clienteId: parseInt(clienteId),
-        fechaHora,
-        estado: 'Agendada',  // Estado fijo
+        ClienteId: parseInt(clienteId),
+        FechaHora: fechaHora,
+        Estado: 'Agendada',  // Estado fijo
       });
 
       onCitaCreada();  // Notifica al padre que debe recargar
@@ -48,7 +48,7 @@ const FormNuevaCita = ({ mostrar, onClose, onCitaCreada }) => {
   if (!mostrar) return null;
 
   const clientesFiltrados = clientes.filter(c =>
-    c.nombre.toLowerCase().includes(filtroCliente.toLowerCase())
+    c.Nombre.toLowerCase().includes(filtroCliente.toLowerCase())
   );
 
   return (
@@ -79,8 +79,8 @@ const FormNuevaCita = ({ mostrar, onClose, onCitaCreada }) => {
                 >
                   <option value="">-- Selecciona un cliente --</option>
                   {clientesFiltrados.map(c => (
-                    <option key={c.id} value={c.id}>
-                      {c.nombre}
+                    <option key={c.Id} value={c.Id}>
+                      {c.Nombre}
                     </option>
                   ))}
                 </select>
