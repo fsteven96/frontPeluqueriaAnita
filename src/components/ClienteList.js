@@ -19,8 +19,8 @@ const ClienteList = () => {
 
   useEffect(() => {
     const resultados = clientes.filter(cliente =>
-      cliente.nombre.toLowerCase().includes(busqueda.toLowerCase()) ||
-      cliente.telefono.includes(busqueda)
+      cliente.Nombre.toLowerCase().includes(busqueda.toLowerCase()) ||
+      cliente.Telefono.includes(busqueda)
     );
     setFiltrados(resultados);
   }, [busqueda, clientes]);
@@ -60,9 +60,9 @@ const handleClienteAgregado = async () => {
           <tbody>
             {filtrados.length > 0 ? (
               filtrados.map(cliente => (
-                <tr key={cliente.id}>
-                  <td>{cliente.nombre}</td>
-                  <td>{cliente.telefono}</td>
+                <tr key={cliente.Id}>
+                  <td>{cliente.Nombre}</td>
+                  <td>{cliente.Telefono}</td>
                 </tr>
               ))
             ) : (
