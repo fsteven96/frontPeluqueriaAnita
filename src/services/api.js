@@ -7,7 +7,7 @@ export const crearCliente = async (cliente) => await axios.post(`${API}/agregarC
 export const obtenerCitasPorCliente = async () => (await axios.get(`${API}/citas/activas`)).data;
 export const agendarCita = async (cita) => {
   console.log('Enviando cita al backend:', cita); 
-  return await axios.post(`${API}/citas`, cita);
+  return await axios.post(`https://peluqueriaanita-aqegegejepffavg3.canadacentral-01.azurewebsites.net/api/cita`, cita);
 };
 
 export const obtenerAtenciones = async (clienteId) => (await axios.get(`${API}/atenciones`)).data;
