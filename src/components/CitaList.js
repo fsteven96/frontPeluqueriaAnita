@@ -101,11 +101,11 @@ const CitaList = () => {
           <tbody>
             {citasFiltradas.length > 0 ? (
               citasFiltradas.map((cita) => (
-                <tr key={cita.id}>
-                  <td>{cita.id}</td>
-                  <td>{cita.nombreCliente}</td>
-                  <td>{new Date(cita.fechaHora).toLocaleString()}</td>
-                  <td>{cita.estado}</td>
+                <tr key={cita.Id}>
+                  <td>{cita.Id}</td>
+                  <td>{cita.Nombre}</td>
+                  <td>{new Date(cita.FechaHora).toLocaleString()}</td>
+                  <td>{cita.Estado}</td>
                 </tr>
               ))
             ) : (
