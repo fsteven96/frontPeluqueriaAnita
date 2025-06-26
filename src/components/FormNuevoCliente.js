@@ -7,10 +7,7 @@ const FormNuevoCliente = ({ mostrar, onClose, onClienteAgregado }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const nuevoCliente = {
-      Nombre: nombre,
-      Telefono: telefono
-    };
+    Const nuevoCliente = { nombre, telefono };
     try {
       const creado = await crearCliente(nuevoCliente);
       console.log(creado);
